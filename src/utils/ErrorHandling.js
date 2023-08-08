@@ -4,7 +4,7 @@ export const catchError = (fn) => {
   };
 };
 
-export const globalErrorHandle = (err, req, res, next) => {
+export const globalErrorHandler = (err, req, res, next) => {
   const error = err.message;
   const statusCode = err.statusCode || 500;
   process.env.MODE == "development"
