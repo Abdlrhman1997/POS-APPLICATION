@@ -1,0 +1,20 @@
+{
+  "name": "pos-application",
+  "version": "1.0.0",
+  "description": "Caffe system that layout drinks with billing system and reports implemented.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdlrhman1997/POS-APPLICATION.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abdlrhman1997/POS-APPLICATION/issues"
+  },
+  "homepage": "https://github.com/Abdlrhman1997/POS-APPLICATION#readme"
+}
