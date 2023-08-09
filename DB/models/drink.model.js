@@ -20,6 +20,20 @@ const drinkSchema = new Schema(
     type: {
       type: String,
       required: true,
+      enum: [
+        "الاسموزي",
+        "مشروبات ساخنة",
+        "العصائر الفريش",
+        "الكوكتيلات",
+        "الزبادو",
+        "مشروبات غازية",
+        "ميلك شيك",
+        "ايس كوفي",
+        "اضافات",
+        "الفرابتشينو",
+        "Hot Flavor اضافة",
+        "Desert",
+      ],
     },
   },
   { timestamps: true }
