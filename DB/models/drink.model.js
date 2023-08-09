@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const userSchema = new Schema(
+const drinkSchema = new Schema(
   {
     name: {
       type: String,
@@ -21,6 +21,6 @@ const userSchema = new Schema(
   { timestamps: true }
 );
 
-const userModel = model("drink", drinkSchema);
+const drinkModel = model("drink", drinkSchema);
 
-export default userModel;
+export default drinkModel;
