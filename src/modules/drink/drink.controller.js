@@ -7,25 +7,26 @@ export const getDrinks = catchError(async (req, res, next) => {
 });
 
 export const addDrink = catchError(async (req, res, next) => {
-  const { name, price, image } = req.body;
-  const newDrink = await drinkModel.Create({ name, price, image });
-  res.status(200).json("done", newDrink);
+  const { name, price, image, category } = req.body;
+  const newDrink = await drinkModel.create({ name, price, image, category });
+  res.status(200).json({ message: "done", newDrink });
 });
 
 export const editDrink = catchError(async (req, res, next) => {
-  const { id, name, price, image } = req.body;
-  const drink = await drinkModel.findByIdAndUpdate(id, { name, price, image });
+  const { id } = req.params;
+  const { price } = req.body;
+  const drink = await drinkModel.findByIdAndUpdate(id, { price });
   if (drink) {
-    res.json("done", { message: `drink updated successfully` });
+    res.json({ message: "done", drink });
   }
   next(new AppError("drink doesn't exist", 404));
 });
 
 export const deleteDrink = catchError(async (req, res, next) => {
-  const { id } = req.body;
+  const { id } = req.params;
   const drink = await drinkModel.findByIdAndDelete(id);
   if (drink) {
-    res.json("done", { message: `drink deleted successfully` });
+    res.json({ message: `done`, drink });
   }
   next(new AppError("drink doesn't exist", 404));
 });

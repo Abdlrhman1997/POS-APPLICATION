@@ -1,6 +1,6 @@
 const dataMethods = ["body", "params", "query", "headers", "file"];
 const fakeObject = {};
-export const validation = (schema) => {
+const validation = (schema) => {
   return (req, res, next) => {
     const validationErrors = [];
     dataMethods.forEach((key) => {
@@ -33,3 +33,5 @@ export const validation = (schema) => {
     return next();
   };
 };
+
+export default validation;
